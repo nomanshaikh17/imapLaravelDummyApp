@@ -13,15 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-//Route::get('/',[App\Http\Controllers\EmailFetchController::class,'index']);
+
 Route::get('/',[App\Http\Controllers\EmailFetchController::class,'connectPage']);
 Route::post('connect',[App\Http\Controllers\EmailFetchController::class,'index'])->name('connect');
 Route::get('emails', function () {
         return view('emails');
     })->name('emails');
 Route::post('search',[App\Http\Controllers\EmailFetchController::class,'custom_search'])->name('search');
-    
-//Route::get('indexPage',[App\Http\Controllers\EmailFetchController::class,'index'])->name('indexPage');
